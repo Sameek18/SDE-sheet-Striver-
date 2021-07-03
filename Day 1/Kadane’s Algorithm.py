@@ -1,12 +1,10 @@
-def sum(l):
-    n=len(l)
-    s=0
-    c=l[0]
-    for i in range(1,n):
-        if c+l[i]>0:
-            c+=l[i]
-        else:
-            c=0
-        s=max(c,s)
-    print(s)
-            
+nums=list(map(int,input().split()))
+csum=0
+msum=0
+for i in range(len(nums)):
+    csum+=nums[i]
+    if csum<0:
+        csum=0
+    elif csum>msum:
+        msum=csum
+print(msum)
