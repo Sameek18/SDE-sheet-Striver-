@@ -26,18 +26,20 @@ def Countsort(nums,n):
 
 class Solution:
     def sortColors(self, nums: List[int]) -> None:
+        #we want all 0s before low , all 1s before mid and all 2s starting from high
+        #initialize three pointers
         low=0
         mid=0
-        high=len(nums)-1
+        high=len(nums)-1      
         while(mid<=high):
             if nums[mid]==0:
-                nums[low],nums[mid]=nums[mid],nums[low]
+                nums[low],nums[mid]=nums[mid],nums[low]   #since mid is 0, we will swap it with low
                 low+=1
                 mid+=1
-            elif nums[mid]==1:
+            elif nums[mid]==1:    
                 mid+=1
             else:
-                 nums[high],nums[mid]=nums[mid],nums[high]
+                 nums[high],nums[mid]=nums[mid],nums[high]  #since mid is 2 we will swap it with high
                  high-=1
                  mid+=1
                     
