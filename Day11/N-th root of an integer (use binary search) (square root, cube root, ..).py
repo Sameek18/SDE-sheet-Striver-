@@ -9,7 +9,7 @@ def findnroot(x,n):
     
     #run binary search
     
-    while abs(mid**n-x)>=eps:    #running the loop till we minimise the difference between the number and the root
+    while abs(mid**n-x)>=eps:    #running the loop till we minimise the difference between mid and the nth root
         if x<mid**n:
             h=mid
         elif x>mid:
