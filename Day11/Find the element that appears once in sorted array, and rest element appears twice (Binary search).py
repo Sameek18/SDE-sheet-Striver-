@@ -25,7 +25,7 @@ def singleNonDuplicate(self, nums: List[int]) -> int:
 # 1st occ:even  ,2nd occ:odd
 
 #after single element:
-# 1st occ:odd  ,2nd occ:even
+#1st occ:odd  ,2nd occ:even
 
 def singleNonDuplicate(self, nums: List[int]) -> int:
         l=0
