@@ -1,3 +1,6 @@
+# 2 pointer approach
+# if there is a loop then slow and fast would meet
+
 class Solution:
     def detectCycle(self, head: ListNode) -> ListNode:
           #initialize 2 nodes pointing to head
