@@ -22,22 +22,27 @@ def findDuplicate(self, nums: List[int]) -> int:
                 return k
 
 #Cycle method
-class Solution:
-    def findDuplicate(self, nums: List[int]) -> int:
-        x=nums[0]
-        y=nums[0]
-        while(True):
-            x=nums[x]
-            y=nums[nums[y]]
-            print(x,y)
-            if x==y:
+def findDuplicate(self, nums: List[int]) -> int:
+        slow=fast=nums[0]
+        
+        # function to find intersection point of 2 pointers
+        while True:
+            slow=nums[slow]  # move 1 at a time
+            fast=nums[nums[fast]]   # move 2 at a time
+            
+            # if both pointers meet break
+            
+            if s==f:       
                 break
-        x=nums[0]
-        while x!=y:
-            x=nums[x]
-            y=nums[y]
-        else:
-            return x
+                
+         # to find entrance to the cycle
+        f=nums[0]
+        
+        while f!=s:
+            f=nums[f]
+            s=nums[s]
+            
+        return s
 
 #Visited array
 class Solution:
