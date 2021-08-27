@@ -1,5 +1,7 @@
 # O(N**2)
 
+#O(n) for traversal * O(n) for height
+
 
 class Solution:
     def isBalanced(self, root: Optional[TreeNode]) -> bool:
@@ -18,3 +20,9 @@ class Solution:
                 return 0
 
             return max(self.height(root.left),self.height(root.right))+1
+        
+        
+        
+# optimised solution
+# O(N)
+
