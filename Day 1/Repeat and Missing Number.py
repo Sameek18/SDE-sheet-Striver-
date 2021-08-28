@@ -1,3 +1,21 @@
+def findTwoElement( self,arr, n):
+        d={}  # hmap
+        repeat=0
+        missing=0
+        for i in arr:  
+            if i not in d:
+                d[i]=True
+            else:       # if i is already present in d then it is repeating
+                repeat=i
+                
+        for i in range(1,n+1):
+            if i not in d:
+                missing=i
+        
+                
+        return (repeat, missing)
+
+
 class Solution:
     def missing(self, nums):
         n=len(nums)
@@ -17,3 +35,4 @@ class Solution:
                 b=b^(i+1)
         print(a,b)
         
+
