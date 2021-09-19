@@ -17,7 +17,8 @@ def maxLen(n, arr):
 
 
 #Optimized solution using hashing
-
+# O(n)
+# space= O(n)
 
 def maxLen(n, arr):
     hmap={}
